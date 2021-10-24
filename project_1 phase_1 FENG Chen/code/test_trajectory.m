@@ -18,7 +18,7 @@ set(gcf, 'Renderer', 'painters');
 
 global T_pre e_p_int phi_c_pre theta_c_pre count P_MSE_list V_MSE_list
 global P_RMS V_RMS
-count = 0;
+count = -1;
 T_pre = 0;
 e_p_int = zeros(3,1);
 phi_c_pre = 0;
