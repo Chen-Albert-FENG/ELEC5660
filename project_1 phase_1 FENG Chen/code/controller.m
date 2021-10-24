@@ -16,8 +16,8 @@ P_MSE_list = [P_MSE_list;e_p'*e_p];
 V_MSE_list = [V_MSE_list; e_v'*e_v];
 des = [des;s_des(1:3)'*s_des(1:3)];
 des_v = [des_v;s_des(4:6)'*s_des(4:6)];
-cur = [cur;s(1:3)'*s(1:3)];
-cur_v = [cur_v;s(4:6)'*s(4:6)];
+cur = [cur;-s(1:3)'*s(1:3)];
+cur_v = [cur_v;-s(4:6)'*s(4:6)];
 
 % s(1:3) current position
 % s(4:6) current velocity
