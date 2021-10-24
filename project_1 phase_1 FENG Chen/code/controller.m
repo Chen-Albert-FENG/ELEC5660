@@ -9,18 +9,15 @@ I = params.I;
 e_p = s_des(1:3) - s(1:3);
 e_v = s_des(4:6) - s(4:6);
 
-global 	T_pre e_p_int count P_MSE_list V_MSE_list  P_RMS V_RMS
+global 	T_pre e_p_int count P_MSE_list V_MSE_list  P_RMS V_RMS des cur des_v cur_v
 P_RMS = P_RMS + e_p'*e_p;
 V_RMS = V_RMS + e_v'*e_v;
 P_MSE_list = [P_MSE_list;e_p'*e_p];
 V_MSE_list = [V_MSE_list; e_v'*e_v];
-%disp("Postion_MSE: "+num2str( e_p'*e_p));
-%disp("Velocity_MSE: "+num2str(e_v'*e_v));
-dt = t - T_pre;
-T_pre = t;
-e_p_int =  dt * e_p +e_p_int;
-count = count + 1;
-
+des = [des;s_des(1:3)'*s_des(1:3)];
+des_v = [des_v;s_des(4:6)'*s_des(4:6)];
+cur = [cur;s(1:3)'*s(1:3)];
+cur_v = [cur_v;s(4:6)'*s(4:6)];
 
 % s(1:3) current position
 % s(4:6) current velocity
