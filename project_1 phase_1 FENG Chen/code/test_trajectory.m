@@ -39,9 +39,9 @@ run_trajectory_readonly(h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, @circle_traject
 %run_trajectory_readonly(h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, @diamond_trajectory);
 
 P_MSE_list(1) = cur(1);
-P_MSE_list(-1) = des(-1);
+P_MSE_list(end) = des(end);
 V_MSE_list(1) = cur_v(1);
-V_MSE_list(-1) = des_v(-1);
+V_MSE_list(end) = des_v(end);
 P_RMS = sum(P_MSE_list);
 V_RMS = sum(V_MSE_list);
 P_RMS = sqrt(P_RMS/count);
