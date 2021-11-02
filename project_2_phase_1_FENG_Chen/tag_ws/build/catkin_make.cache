@@ -1,0 +1,2 @@
+tag_detector
+-DCATKIN_DEVEL_PREFIX=/home/albert/ELEC5660/proj2phase1/tag_ws/devel -DCMAKE_INSTALL_PREFIX=/home/albert/ELEC5660/proj2phase1/tag_ws/install -G Unix Makefiles

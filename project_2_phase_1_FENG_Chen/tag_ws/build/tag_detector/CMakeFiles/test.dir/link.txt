@@ -1,0 +1,1 @@
+/usr/bin/c++ -std=c++11 -march=native -DEIGEN_DONT_PARALLELIZE -O3 -Wall -rdynamic CMakeFiles/test.dir/src/test.cpp.o -o /home/albert/ELEC5660/proj2phase1/tag_ws/devel/lib/tag_detector/test   -L/usr/local/lib 
